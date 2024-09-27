@@ -3,16 +3,25 @@
 # Не забудьте, що перший елемент масиву має індекс 0.
 # Для порожнього масиву результат завжди 0.
 
-# list_1 = [0, 1, 7, 2, 4, 8]
+list_1 = [0, 1, 7, 2, 4, 8]
 list_1 = [1, 3, 5]
 # list_1 = [6]
 # list_1 = []
 
-answer_sum_and_multiplication = 0
-for number_on_index in list_1:
-    if not list_1.index(number_on_index) % 2:
-        answer_sum_and_multiplication += number_on_index
+# ver_1
+# answer_sum_and_multiplication = 0
+# for number_on_index in list_1:
+#     if not list_1.index(number_on_index) % 2:
+#         answer_sum_and_multiplication += number_on_index
+# else:
+#     if list_1:
+#         answer_sum_and_multiplication *= list_1[-1]
+# print(f'{list_1} => {answer_sum_and_multiplication}')
+
+# ver_2
+if list_1:
+    sum_even_indexes = sum(list_1[::2])
+    result = sum_even_indexes * list_1[-1]
 else:
-    if list_1:
-        answer_sum_and_multiplication *= list_1[-1]
-print(f'{list_1} => {answer_sum_and_multiplication}')
+    result = 0
+print(f'{list_1} => {result}')
