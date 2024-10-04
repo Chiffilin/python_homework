@@ -19,7 +19,7 @@ while int(user_input) > 9:
 print(user_input)
 
 # Test ver
-# str_list = ["999", "1000",asd "423", "33", "25", "1",]
+# str_list = ["999", "1000", "423", "33", "25", "1",]
 #
 # for number in str_list:
 #     while int(number) > 9:
