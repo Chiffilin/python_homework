@@ -1,6 +1,13 @@
 # HW 6.2. Конвертер із числа в дату
 
-user_input = int(input("Enter second's:"))
+# user_input = int(input("Enter second's:"))
+while True:
+    user_input = input("Enter second's:")
+    if user_input.isdigit():
+        user_input = int(user_input)
+        break
+    else:
+        print("Good try! ^-^ Try again")
 
 if 0 <= user_input < 8640000:
     day, hour = divmod(user_input,24*60*60)
@@ -11,7 +18,7 @@ if 0 <= user_input < 8640000:
         my_str = "днів"
     print(f"{day} {my_str}, {str(hour).zfill(2)}:{str(minutes).zfill(2)}:{str(seconds).zfill(2)}")
 else:
-    print("Error: out of range ( 0 <= input < 8640000")
+    print("Error: out of range ( 0 <= число < 8640000)")
 
 
 # test_numbers = [0, 224930, 466289, 950400, 1209600, 1900800, 8639999, 22493, 7948799]
