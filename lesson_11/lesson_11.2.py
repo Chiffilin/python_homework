@@ -10,7 +10,7 @@
 
 #### ver_2 ####
 def generate_cube_numbers(end):
-    number = 2
+    number = 2  
     while (cube_num := number ** 3) <= end:
         yield cube_num
         number += 1
