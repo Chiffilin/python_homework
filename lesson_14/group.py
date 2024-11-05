@@ -1,4 +1,5 @@
 from student import Student
+from custom_exceptions import GroupLimitError
 
 class Group:
 
@@ -7,6 +8,8 @@ class Group:
         self.group = set()
 
     def add_student(self, student):
+        if len(self.group) >= 10:
+            raise GroupLimitError()
         self.group.add(student)
 
     def delete_student(self, last_name):
